@@ -3,13 +3,13 @@ DROP TABLE authors;
 
 CREATE TABLE authors
 (
-    id SERIAL PRIMARY KEY
+    id SERIAL PRIMARY KEY,
       name VARCHAR(255) not null
 );
 
 CREATE TABLE books
 (
-    id SERIAL PRIMARY KEY
+    id SERIAL PRIMARY KEY,
     title VARCHAR(255) not null,
     genre VARCHAR(255),
     book_type VARCHAR(255),
