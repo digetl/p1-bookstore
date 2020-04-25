@@ -43,5 +43,12 @@ class Author
         sql = "DELETE FROM authors"
         SqlRunner.run( sql )
     end
-    
+
+    def self.destroy(id)
+        "sql = DELETE FROM authors
+        WHERE id = $1"
+        values = ['id']
+        SqlRunner.run(sql,values)
+    end
+
 end

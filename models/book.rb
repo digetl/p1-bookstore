@@ -47,6 +47,13 @@ class Book
         SqlRunner.run( sql )
     end
 
+    def self.destroy(id)
+        "sql = DELETE FROM books
+        WHERE id = $1"
+        values = ['id']
+        SqlRunner.run(sql,values)
+    end
+    
 
 
 end
