@@ -5,10 +5,3 @@
 <h1>What do you want to do?</h1>
     <h2>Show Books</h2>
     <h2>Show Authors</h2>
-
-
-<% @authors.each do |author|  %>
-    <p>Name: <%= author.name()  %></p>
-    <p><a href="auhtor/<%= author.id %>">Author Details</a></p>
-    <hr />
-<% end %>

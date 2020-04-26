@@ -4,5 +4,5 @@ require_relative('controllers/authors_controllers')
 require_relative('controllers/books_controllers')
 
 get '/' do
-  erb( :index )
+  erb( :bookstore )
 end
