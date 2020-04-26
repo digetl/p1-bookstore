@@ -5,7 +5,7 @@ class Book
 
     attr_reader(:title, :genre, :book_type, :stock_level, :selling_price, :buying_price, :author_id, :id)
 
-    def initialise( options )
+    def initialize( options )
         @id = options['id'].to_i if options['id']
         @title = options['title']
         @book_type = options['book_type']
