@@ -106,7 +106,7 @@ book8 = Book.new({
     "buying_price" => "6",
     "author_id" => author3.id
 })
-book5.save()
+book8.save()
 
 book9 = Book.new({
     "title" => "Breakdown",
@@ -185,12 +185,12 @@ book14 = Book.new({
 book14.save()
 
 book15 = Book.new({
-    "title" => "The Demon Dentist",
+    "title" => "Fing",
     "genre" => "childrens",
     "book_type" => "hard-back",
-    "stock_level" => "4",
-    "selling_price" => "19",
-    "buying_price" => "8",
-    "author_id" => author5.id
+    "stock_level" => "5",
+    "selling_price" => "18",
+    "buying_price" => "7",
+    "author_id" => author4.id
 })
 book15.save()

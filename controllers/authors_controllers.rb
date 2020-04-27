@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/author.rb' )
+require('pry')
 also_reload( '../models/*' )
 
 # new
@@ -22,15 +23,22 @@ get '/authors/:id' do
     erb(:"authors/show")
 end
 
+# create
+post '/authors' do
+    Author.new(params).save()
+    redirect to '/authors'
+end
+
 # edit
 get '/authors/:id/edit' do
     @author = Author.find(params[:id].to_i)
-    erb(:"edit")
+    erb(:"authors/edit")
 end
 
 # update
 post '/authors/:id' do
-    Author.new(params).update()
+    whatever = Author.new(params)
+    whatever.update()
     redirect to '/authors'
 end
 

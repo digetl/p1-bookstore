@@ -5,7 +5,8 @@ also_reload( '../models/*' )
 
 # new
 get '/books/new' do
-    erb(:"new")
+    @authors = Author.all()
+    erb(:"books/new")
 end
 
 # index
@@ -17,6 +18,7 @@ end
 # show
 get '/books/:id' do
     @book = Book.find(params['id'].to_i)
+    @author = Author.find(@book.author_id)
     erb(:"books/show")
 end
 
@@ -24,4 +26,21 @@ end
 post '/books/' do
     Book.new(params).save()
     redirect to '/books'
+end
+
+# edit
+post 'books' do
+    Book.new(params).save()
+    redirect to '/books'
+end
+
+#update
+post '/books/:id' do
+    Book.new(params).update()
+    redirect to '/books'
+end
+
+# destroy
+post '/books/:id/delete' do
+    Book.find(params[:id].to_i).delete()
 end

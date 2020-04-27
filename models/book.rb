@@ -62,6 +62,7 @@ class Book
         values = ['id']
         SqlRunner.run(sql,values)
     end
+    
 
     def update()
     sql = "UPDATE books

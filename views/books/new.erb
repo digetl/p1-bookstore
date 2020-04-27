@@ -1,0 +1,53 @@
+<h2>Add book</h2>
+
+<form method="POST" action="/books">
+  <ul>
+    <li>
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title"/>
+    </li>
+
+    <li>
+        <label for="author_select">Select Author:</label>
+            <select name="author_id" id="author_select">
+                <% @authors.each do |author|  %>
+                <option value="<%= author.id %>"><%= author.name() %></option>
+                <% end  %>
+            </select>
+    </li>
+
+    <li>
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre"/>
+    </li>
+
+    <li>
+        <label for="book-type">Book type:</label>
+        <input type="text" name="book_type" id="book-type"/>
+    </li>
+
+    <li>
+        <label for="stock-level">Stock level (between 1 and 30):</label>
+        <input type="number" name="stock_level" id="stock-level" min="1" max="30"/>
+    </li>
+
+    <li>
+        <label for="selling-price">Selling price: £</label>
+        <input type="number" name="selling_price" id="selling-price" min="1" max="1000"/>
+    </li>
+        
+    <li>
+        <label for="buying-price">Buying price: £</label>
+        <input type="number" name="buying_price" id="buying-price" min="1" max="999"/>
+    </li>
+        
+    <li> 
+        <input type="submit" value="Add Book">
+    </li>
+
+  </ul>
+</form>
+
+<p><a href="/books">Back to all books</a></p>
+
+<p><a href="/">Back to main page</a></p>

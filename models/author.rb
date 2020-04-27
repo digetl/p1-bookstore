@@ -3,7 +3,8 @@ require_relative( '../db/sql_runner' )
 
 class Author
 
-    attr_reader( :name, :id)
+    attr_reader( :id )
+    attr_accessor( :name )
 
     def initialize( options )
         @id = options['id'].to_i if options['id']
@@ -53,14 +54,12 @@ class Author
 
     def update()
         sql = "UPDATE authors
-        SET
-        (
-          name
-        )
-        VALUES
-        (
+        SET name
+        
+        =
+        
           $1
-        )     
+        
         WHERE id = $2"
         values = [@name, @id]
         SqlRunner.run( sql, values )
