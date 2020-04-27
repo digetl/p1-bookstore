@@ -1,11 +1,12 @@
 <div>
 
 <p><a href="/books/new">Add new book</a></p>
+<hr />
 
 
 <% @books.each do |book|  %>
-    <p>Title: <%= book.title()  %></p>
-    <p>Genre: <%= book.genre()  %></p>    
+    <p><strong>Title: <%= book.title()  %></strong></p>
+    <p>Stock level: <%= book.stock_level()  %></p>    
     <p><a href="books/<%= book.id %>">Book Details</a></p>
     <hr />
 <% end %>
