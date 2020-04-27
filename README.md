@@ -10,9 +10,9 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 
 Running instructions:
 
-Required:
-Postico
-Sinatra
+### Required:
+# Postico
+##### Sinatra
 Sinatra Contrib all
 Ruby Gems:
   pg
