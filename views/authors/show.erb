@@ -1,0 +1,11 @@
+<h1>Author details</h1>
+
+<ul>
+  <li>Name: <%= @author.name %></li>
+  <li><a href="/authors/<%= @author.id %>/edit">Edit Author Details</a></li>
+  <li>
+    <form method="post" action="/authors/<%= @author.id %>/delete">
+      <input type="submit" value="Delete"/>
+    </form>
+  </li>
+</ul>

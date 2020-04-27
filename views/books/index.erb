@@ -2,7 +2,7 @@
 
 <% @books.each do |book|  %>
     <p>Title: <%= book.title()  %></p>
-    <p>Genre: <%= book.genre()  %></p>
+    <p>Genre: <%= book.genre()  %></p>    
     <p><a href="books/<%= book.id %>">Book Details</a></p>
     <hr />
 <% end %>

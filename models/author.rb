@@ -32,7 +32,7 @@ class Author
     end
 
     def self.find(id)
-        sql = "SELECT * FROM zombies
+        sql = "SELECT * FROM authors
         WHERE id = $1"
         values = [id]
         results = SqlRunner.run( sql, values )
