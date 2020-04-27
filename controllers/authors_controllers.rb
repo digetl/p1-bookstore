@@ -37,8 +37,8 @@ end
 
 # update
 post '/authors/:id' do
-    whatever = Author.new(params)
-    whatever.update()
+    author_to_update = Author.new(params)
+    author_to_update.update()
     redirect to '/authors'
 end
 
