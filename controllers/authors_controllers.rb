@@ -6,7 +6,6 @@ also_reload( '../models/*' )
 
 # new
 get '/authors/new' do
-    @authors = Author.all()
     erb(:"authors/new")
 end
 

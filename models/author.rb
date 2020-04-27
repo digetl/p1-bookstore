@@ -44,22 +44,12 @@ class Author
         sql = "DELETE FROM authors"
         SqlRunner.run( sql )
     end
-
-    def self.delete(id)
-        "sql = DELETE FROM authors
-        WHERE id = $1"
-        values = ['id']
-        SqlRunner.run(sql,values)
-    end
-
+    
     def update()
         sql = "UPDATE authors
         SET name
-        
-        =
-        
-          $1
-        
+        =      
+        $1
         WHERE id = $2"
         values = [@name, @id]
         SqlRunner.run( sql, values )
@@ -72,5 +62,10 @@ class Author
         values = [@id]
         SqlRunner.run(sql, values)
       end
+
+    # def books()
+    #     sql = "SELECT * FROM books
+    #     WHERE"
+    # end
 
 end
