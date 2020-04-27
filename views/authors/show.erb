@@ -3,9 +3,15 @@
 <ul>
   <li>Name: <%= @author.name %></li>
   <li><a href="/authors/<%= @author.id %>/edit">Edit Author Details</a></li>
+
   <li>
-    <form method="post" action="/authors/<%= @author.id %>/delete">
-      <input type="submit" value="Delete"/>
-    </form>
-  </li>
+  <form method="post" action="/authors/<%= @author.id %>/delete">
+  <input type="submit" value="Delete"/></li>
 </ul>
+      
+
+
+<p><a href="/authors">Back to all authors</a></p>
+
+<p><a href="/">Back to main page</a></p>
+

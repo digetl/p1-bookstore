@@ -16,5 +16,5 @@ CREATE TABLE books
     stock_level INT,
     selling_price INT,
     buying_price INT,
-    author_id INT references authors(id)
+    author_id INT references authors(id) ON DELETE CASCADE
 );

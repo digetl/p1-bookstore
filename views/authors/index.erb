@@ -1,5 +1,7 @@
 <div>
 
+<p><a href="/authors/new">Add new author</a></p>
+
 <% @authors.each do |author|  %>
     <p>Name: <%= author.name()  %></p>
     <p><a href="/authors/<%= author.id %>">Author Details</a></p>

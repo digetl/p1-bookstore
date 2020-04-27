@@ -2,16 +2,27 @@
 
 <ul>
   <li>Title: <%= @book.title %></li>
+  <li>Author: (Insert author ID)</li>
+
+
   <li>Genre: <%= @book.genre %></li>
-  <%#=   <li>Author: <%= @book.author_id().name %></li>
-
-
+  <li>Book type: <%= @book.book_type %></li>
+  <li>Stock level: <%= @book.stock_level %></li>
+  <li>Selling price: £<%= @book.selling_price %></li>
+  <li>Buying in price: £<%= @book.buying_price %></li>
+</br>
   <li><a href="/books/<%= @book.id %>/edit">Edit Details</a></li>
+  </br>
   <li>
     <form method="post" action="/books/<%= @book.id %>/delete">
       <input type="submit" value="Delete"/>
     </form>
   </li>
 </ul>
+
+<p><a href="/books">Back to all books</a></p>
+
+<p><a href="/">Back to main page</a></p>
+
 
 
