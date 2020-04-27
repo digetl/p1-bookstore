@@ -1,0 +1,13 @@
+<div>
+
+<% @authors.each do |author|  %>
+    <p>Name: <%= author.name()  %></p>
+    <p><a href="author/<%= author.id %>">Author Details</a></p>
+    <hr />
+<% end %>
+
+
+<p><a href="/">Back to main page</a></p>
+
+
+</div>

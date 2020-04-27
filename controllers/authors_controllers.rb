@@ -6,6 +6,6 @@ also_reload( '../models/*' )
 # index
 get '/authors' do
     @authors = Author.all()
-    erb(:index)
+    erb( :"authors/index" )
 end
 
