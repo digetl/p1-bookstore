@@ -1,5 +1,13 @@
 # p1-bookstore
 Week 4 Project 1 - Bookstore | Ruby | SQL | Sinatra
+
+
+Brief:
+### Shop Inventory
+
+Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers.
+
+
 Running instructions:
 
 Required:
