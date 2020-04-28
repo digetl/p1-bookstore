@@ -12,7 +12,7 @@ class Book
         @stock_level = options['stock_level']
         @selling_price = options['selling_price']
         @buying_price = options['buying_price']
-        @author_id = options['author_id']
+        @author_id = options['author_id'].to_i
     end
 
     def save()
@@ -65,8 +65,7 @@ class Book
             stock_level,
             selling_price,
             buying_price,
-            author_id)
-        VALUES
+            author_id) =
         (
             $1, $2, $3, $4, $5, $6, $7
         )

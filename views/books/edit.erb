@@ -8,14 +8,44 @@
     </li>
 
     <li>
-       <label for="author_select">Author Name:</label>
-           <select name="author_id" id="author_select">
-               <% @authors.each do |author|  %>
-               <option value="<%= author.id %>"><%= author.name() %></option>
-               <% end  %>
-           </select>
+        <label for="author_select">Select Author:</label>
+            <select name="author_id" id="author_select" selected="<%= @book.author_id %>">
+            
+                <% @authors.each do |author|  %>
+                    <% if author.id == @book.author_id %>
+                        <option value=<%= author.id %> selected> <%= author.name %> </option>
+                        <% else %>
+                        <option value=<%= author.id %>> <%= author.name %> </option>
+                    <% end %>
+                <% end  %>
+            </select>
+    </li>
+
+     <li>
+        <label for="genre">Genre:</label>
+        <input type="text" value="<%= @book.genre %>" name="genre" id="genre"/>
+    </li>
+
+      <li>
+        <label for="book-type">Book type:</label>
+        <input type="text" value="<%= @book.book_type %>" name="book_type" id="book-type"/>
+    </li>
+
+    <li>
+        <label for="stock-level">Stock level (30 max):</label>
+        <input type="number" value="<%= @book.stock_level %>" name="stock_level" id="stock-level" min="1" max="30"/>
+    </li>
+
+    <li>
+        <label for="selling-price">Selling price: £</label>
+        <input type="number" value="<%= @book.selling_price %>" name="selling_price" id="selling-price" min="1" max="1000"/>
     </li>
     
+    <li>
+        <label for="buying-price">Buying price: £</label>
+        <input type="number" value="<%= @book.buying_price %>"  name="buying_price" id="buying-price" min="1" max="999"/>
+    </li>
+
 
     <input type="submit" value="Update Book">
 
