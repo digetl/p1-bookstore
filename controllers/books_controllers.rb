@@ -28,6 +28,19 @@ post '/books' do
     redirect to '/books'
 end
 
+# low stock
+get '/books/low_stock' do
+    @books = Books.filter_by_low_stock
+    erb (:"books/low_stock")
+end
+
+# out of stock
+get '/books/out_of_stock' do
+    @books = Books.filter_by_out_of_stock
+    erb (:"books/out_of_stock")
+end
+
+
 # edit
 get '/books/:id/edit' do
     @book = Book.find(params[:id].to_i)
