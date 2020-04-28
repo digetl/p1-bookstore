@@ -30,14 +30,16 @@ post '/books/' do
 end
 
 # edit
-post 'books' do
-    Book.new(params).save()
-    redirect to '/books'
+get '/books/:id/edit' do
+    @book = Book.find(params[:id].to_i)
+    erb(:"books/edit")
 end
 
 #update
 post '/books/:id' do
-    Book.new(params).update()
+
+    book_to_update = Book.new(params)
+    book_to_update.update()
     redirect to '/books'
 end
 

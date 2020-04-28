@@ -61,7 +61,7 @@ class Author
         WHERE id = $1"
         values = [@id]
         SqlRunner.run(sql, values)
-      end
+    end
 
     # def books()
     #     sql = "SELECT * FROM books
