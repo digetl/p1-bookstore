@@ -32,6 +32,7 @@ end
 get '/books/low_stock' do
     @books = Book.filter_by_low_stock()
     erb (:"books/low_stock")
+    binding.remote_pry
 end
 
 # out of stock index
