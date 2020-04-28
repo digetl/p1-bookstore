@@ -12,7 +12,9 @@ class Author
 
     def save()
         sql = "INSERT INTO authors
-        name = ( $1 )     
+        (
+            name
+        ) VALUES ( $1 )     
         RETURNING id"
         values = [@name]
         results = SqlRunner.run(sql, values)
