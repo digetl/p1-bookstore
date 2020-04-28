@@ -1,6 +1,5 @@
 require_relative( '../db/sql_runner' )
 
-
 class Author
 
     attr_reader( :id )
@@ -13,13 +12,7 @@ class Author
 
     def save()
         sql = "INSERT INTO authors
-        (
-            name
-        )
-        VALUES
-        (
-            $1
-        )     
+        name = ( $1 )     
         RETURNING id"
         values = [@name]
         results = SqlRunner.run(sql, values)

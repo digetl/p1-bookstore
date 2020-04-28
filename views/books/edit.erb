@@ -1,14 +1,25 @@
 <h2>Edit <%= @book.title %></h2>
 
 <form method="POST" action="/books/<%= @book.id %>">
-    <label for="title">Title:</label>
-    <input type="text" name="title" value="<%= @book.title %>">
 
-    
+<ul>
+    <li><label for="title">Title:</label>
+        <input type="text" name="title" value="<%= @book.title %>">
+    </li>
 
+    <li>
+       <label for="author_select">Author Name:</label>
+           <select name="author_id" id="author_select">
+               <% @authors.each do |author|  %>
+               <option value="<%= author.id %>"><%= author.name() %></option>
+               <% end  %>
+           </select>
+    </li>
     
 
     <input type="submit" value="Update Book">
+
+    </ul>
 
 </form>
 

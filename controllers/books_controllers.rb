@@ -3,7 +3,6 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/book.rb' )
 also_reload( '../models/*' ) 
 
-
 # new
 get '/books/new' do
     @authors = Author.all()
@@ -24,7 +23,7 @@ get '/books/:id' do
 end
 
 #create
-post '/books/' do
+post '/books' do
     Book.new(params).save()
     redirect to '/books'
 end
@@ -37,7 +36,6 @@ end
 
 #update
 post '/books/:id' do
-
     book_to_update = Book.new(params)
     book_to_update.update()
     redirect to '/books'

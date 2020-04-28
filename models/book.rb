@@ -1,9 +1,8 @@
 require_relative( '../db/sql_runner' )
 
-
 class Book
 
-    attr_reader(:title, :genre, :book_type, :stock_level, :selling_price, :buying_price, :author_id, :id)
+    attr_accessor(:title, :genre, :book_type, :stock_level, :selling_price, :buying_price, :author_id, :id)
 
     def initialize( options )
         @id = options['id'].to_i if options['id']
@@ -54,15 +53,7 @@ class Book
     def self.delete_all
         sql = "DELETE FROM books"
         SqlRunner.run( sql )
-    end
-
-    def delete()
-        sql = "DELETE FROM books
-        WHERE id = $1"
-        values = [@id]
-        SqlRunner.run(sql, values)
-    end
-    
+    end  
 
     def update()
     sql = "UPDATE books
@@ -84,6 +75,11 @@ class Book
         SqlRunner.run( sql, values )
     end
 
-
+    def delete()
+        sql = "DELETE FROM books
+        WHERE id = $1"
+        values = [@id]
+        SqlRunner.run(sql, values)
+    end
 
 end
