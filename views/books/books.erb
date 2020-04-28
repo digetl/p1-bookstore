@@ -1,0 +1,39 @@
+<div>
+
+<p><a href="/books/new">Add new book</a></p>
+<p class="filters">Filter by: 
+| <a href="/books/low_stock">Low Stock</a> 
+| <a href="/books/out_of_stock">Out of Stock</a>
+</p>
+
+<hr />
+
+<div class="books-wrapper">
+    <% @books.each do |book|  %>
+        <p><strong>Title: <%= book.title()  %></strong></p>
+
+        <div class="book-stock">
+
+            <% if book.low_stock?%>
+                <div class="low-stock">
+                    <p>Stock level: <%= book.stock_level()  %></p>
+                </div>
+            <% elsif book.out_of_stock?%>
+                <div class="out-of-stock">
+                    <p>Stock level: <%= book.stock_level()  %></p>
+                </div>
+            <% else %>
+                <div class="in-stock">
+                    <p>Stock level: <%= book.stock_level()  %></p>
+                </div>
+            <% end %>
+
+        </div>
+        <p><a href="books/<%= book.id %>">Book Details</a></p>
+        <hr />
+    <% end %>
+</div>
+
+<p><a href="/">Back to main page</a></p>
+
+</div>
