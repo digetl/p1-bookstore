@@ -11,10 +11,18 @@ header {
 }
 
 
+h1, h2, p {    font-family: 'Roboto', sans-serif;
+}
 
+main {
+    padding: 1rem 4rem;
+}
 
 body {
+    
 
+
+    background-image: url(/images/background.jpg);}
 
 }
 .low-stock {
@@ -28,4 +36,43 @@ body {
 }
 
 .in-stock {
+}
+a {
+	background-color: red;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  padding: 0.5em 1.5em;
+  position: relative;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+}
+
+a:hover {
+  background-color: #ce0606;
+  cursor: pointer;
+}
+
+a:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+h2{
+    padding-bottom: 1em;
+}
+
+.books-wrapper {
+    padding-bottom: 1em;
+
+}
+
+.authors-list {
+    line-height: 2em;
+}
+
+footer {
+    /* position: fixed; */
+    /* bottom: 1rem; */
+
+    padding: 4rem 0 0 4rem;
 }
