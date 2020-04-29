@@ -1,12 +1,13 @@
 <div>
 
-<p><a href="/authors/new">Add new author</a></p>
+<p><a href="/authors/new">Add new author</a> | <a href="/">Back to main page</a></p>
+
 <br />
 
 <ul>
     <% @authors.each do |author|  %>
         <li class="authors-list">
-        <p>Name: <strong><%= author.name()  %> </strong></p>
+        <p class="author-name">Name: <strong><%= author.name()  %> </strong></p>
         <p><a href="/authors/<%= author.id %>">Author Details</a></p>
         </li>
     <% end %>

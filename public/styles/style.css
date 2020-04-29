@@ -70,6 +70,15 @@ h2{
 
 }
 
+.author-name {
+    font-size: 1.25rem;
+  }
+  
+  li {
+    
+    list-style: none;
+  }
+
 
 .authors-list {
     line-height: 2em;
