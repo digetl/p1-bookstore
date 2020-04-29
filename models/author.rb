@@ -50,7 +50,6 @@ class Author
         SqlRunner.run( sql, values )
     end
 
-
     def delete()
         sql = "DELETE FROM authors
         WHERE id = $1"

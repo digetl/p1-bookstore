@@ -109,5 +109,4 @@ class Book
         return profit = @selling_price - @buying_price
     end
 
-
 end
