@@ -13,7 +13,8 @@ header {
 }
 
 
-h1, h2, p {    font-family: 'Roboto', sans-serif;
+h1, h2, p, a, ul, li, form{
+    font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -98,5 +99,9 @@ footer {
 }
 
 p strong {
-    font-size: 2rem;
+    font-size: 1.5rem;
     }
+
+.author-details{
+        font-family: Roboto;
+}
