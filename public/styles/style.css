@@ -26,7 +26,7 @@ body {
 }
 a {
 	background-color: red;
-  box-shadow: 0 5px 0 darkred;
+  box-shadow: 0 2px 0 darkred;
   color: white;
   padding: 0.5em 1.5em;
   position: relative;
