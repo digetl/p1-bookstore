@@ -105,5 +105,9 @@ class Book
         return @stock_level == 0
     end
     
+    def mark_up
+        return profit = @selling_price - @buying_price
+    end
+
 
 end
