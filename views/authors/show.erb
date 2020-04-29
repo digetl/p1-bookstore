@@ -7,8 +7,26 @@
   <br />
   <li><a href="/authors/<%= @author.id %>/edit">Edit Author Details</a></li>
   <li>
-   <br />
-  <form method="post" action="/authors/<%= @author.id %>/delete">
-  <input type="submit" value="Delete"/></li>
+  <li><br/></li>
+  <li>  <form method="post" action="/authors/<%= @author.id %>/delete">
+  <input type="submit" value="Delete"/></li></li>
+
 </ul>
+
+
+<br />
+<br />
+
+
+<h1>Books written by Author</h2>
+  <ul>
+  <% @books.each do |book|  %>
+          <li class="book-list">
+          <p class="Title">Title: <strong><%= book.title()  %> </strong></p>
+          </li>
+      <% end %>
+  <ul>
+
+
+
 
