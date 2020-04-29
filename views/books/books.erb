@@ -1,12 +1,13 @@
 <div>
+<div class="book-header">
 <p><a href="/books/new">Add new book</a></p>
-<br/ >
-
+<hr />
 <p class="filters">Filter by: 
 | <a href="/books/low_stock">Low Stock</a> 
 | <a href="/books/out_of_stock">Out of Stock</a>
 | <a href="/books">Show all</a>
 </p>
+</div>
 
 <hr />
 
@@ -28,11 +29,13 @@
                 <div class="in-stock">
                     <p>Stock level: <%= book.stock_level() %></p>
                 </div>
+                
             <% end %>
 
         </div>
         <p><a href="books/<%= book.id %>">Book Details</a></p>
-        <hr />
+                <div class="book-spacer"></div>
+
     <% end %>
 </div>
 

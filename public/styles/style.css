@@ -1,6 +1,8 @@
 header {
     padding:4rem;
-    background-image: url(/images/header.jpg);}
+    background-image: url(/images/header.jpg);
+    background-size: cover;
+    width:100vw;}
 
 .main-heading {
 
@@ -19,7 +21,8 @@ main {
 }
 
 body {
-        background-image: url(/images/background.jpg);}
+        background-image: url(/images/background.jpg);
+        background-size: 0fr;
 }
 
 .in-stock {
@@ -46,8 +49,6 @@ a {
     padding:0.2rem;
 }
 
-
-
 a:hover {
   background-color: #ce0606;
   cursor: pointer;
@@ -63,8 +64,12 @@ h2{
 }
 
 .books-wrapper {
-    padding-bottom: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    max-width: 60vw;
+    background-color: lightcyan;
+
 }
+
 
 .authors-list {
     line-height: 2em;
@@ -73,3 +78,16 @@ h2{
 footer {
     padding: 4rem 0 0 4rem;
 }
+
+.book-spacer{
+    padding: 0.5rem;
+    background:rgba(255,255,255, 0.5);
+}
+
+.filters {
+    text-align:right;
+}
+
+p strong {
+    font-size: 2rem;
+    }
