@@ -7,6 +7,9 @@ Shop Inventory
 
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers.
 
+# Screenshot
+![screenshot](screenshots/homepage.png)
+
 
 # Running instructions:
 
