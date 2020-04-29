@@ -81,28 +81,28 @@ class Book
         SqlRunner.run(sql, values)
     end
 
-    def filter_by_low_stock()
+    def self.filter_by_low_stock()
         sql = "SELECT * FROM books
         WHERE stock_level < 3
         ORDER BY stock_level DESC"
-        book_data = SqlRunner.run(sql)
-        return results.map {|book_data| Book.new(book_data)}
+        books_data = SqlRunner.run(sql)
+        return books_data.map {|book_data| Book.new(book_data)}
 
     end
 
-    def filter_by_out_of_stock()
+    def self.filter_by_out_of_stock()
         sql = "SELECT * FROM books
         WHERE stock_level = 0"
-        book_data = SqlRunner.run(sql)
-        return results.map {|book_data| Book.new(book_data)}
+        books_data = SqlRunner.run(sql)
+        return books_data.map {|book_data| Book.new(book_data)}
     end
 
     def low_stock?
-        @stock_level == 1 || @stock_level == 2 || @stock_level == 3
+        return @stock_level == 1 || @stock_level == 2 || @stock_level == 3
     end
 
     def out_of_stock?
-        @stock_level == 0
+        return @stock_level == 0
     end
     
 

@@ -15,12 +15,6 @@ get '/books' do
     erb( :"books/index" )
 end
 
-# show
-get '/books/:id' do
-    @book = Book.find(params['id'].to_i)
-    @author = Author.find(@book.author_id)
-    erb(:"books/show")
-end
 
 #create
 post '/books' do
@@ -31,14 +25,13 @@ end
 # low stock index
 get '/books/low_stock' do
     @books = Book.filter_by_low_stock()
-    erb (:"books/low_stock")
-    binding.remote_pry
+    erb (:"books/books")
 end
 
 # out of stock index
 get '/books/out_of_stock' do
     @books = Book.filter_by_out_of_stock()
-    erb (:"books/out_of_stock")
+    erb (:"books/books")
 end
 
 
@@ -60,4 +53,11 @@ end
 post '/books/:id/delete' do
     Book.find(params[:id].to_i).delete()
     redirect to '/books'
+end
+
+# show
+get '/books/:id' do
+    @book = Book.find(params['id'].to_i)
+    @author = Author.find(@book.author_id)
+    erb(:"books/show")
 end
