@@ -17,15 +17,15 @@
 
             <% if book.low_stock?%>
                 <div class="low-stock">
-                    <p>Stock level: <%= book.stock_level()  %></p>
+                    <p>Stock level: <%= book.stock_level() %></p>
                 </div>
             <% elsif book.out_of_stock?%>
                 <div class="out-of-stock">
-                    <p>Stock level: <%= book.stock_level()  %></p>
+                    <p>Stock level: <%= book.stock_level() %></p>
                 </div>
             <% else %>
                 <div class="in-stock">
-                    <p>Stock level: <%= book.stock_level()  %></p>
+                    <p>Stock level: <%= book.stock_level() %></p>
                 </div>
             <% end %>
 

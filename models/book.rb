@@ -9,9 +9,9 @@ class Book
         @title = options['title']
         @genre = options['genre']
         @book_type = options['book_type']
-        @stock_level = options['stock_level']
-        @selling_price = options['selling_price']
-        @buying_price = options['buying_price']
+        @stock_level = options['stock_level'].to_i
+        @selling_price = options['selling_price'].to_i
+        @buying_price = options['buying_price'].to_i
         @author_id = options['author_id'].to_i
     end
 
