@@ -19,20 +19,7 @@ main {
 }
 
 body {
-    
-
-
-    background-image: url(/images/background.jpg);}
-
-}
-.low-stock {
-
-    background-color: darkcyan;
-}
-
-.out-of-stock {
-
-    background-color: darkred;
+        background-image: url(/images/background.jpg);}
 }
 
 .in-stock {
@@ -46,6 +33,20 @@ a {
   text-decoration: none;
   /* text-transform: uppercase; */
 }
+
+.low-stock {
+    background-color:rgb(113, 159, 174);
+    padding:0.2rem;
+
+}
+
+.out-of-stock {
+    color:white;
+    background-color: darkred;
+    padding:0.2rem;
+}
+
+
 
 a:hover {
   background-color: #ce0606;
@@ -63,7 +64,6 @@ h2{
 
 .books-wrapper {
     padding-bottom: 1em;
-
 }
 
 .authors-list {
@@ -71,8 +71,5 @@ h2{
 }
 
 footer {
-    /* position: fixed; */
-    /* bottom: 1rem; */
-
     padding: 4rem 0 0 4rem;
 }
